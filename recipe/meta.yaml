@@ -11,8 +11,6 @@ package:
 source:
   url: https://github.com/SasView/{{ name }}/archive/v{{ version }}.{{ file_ext }}
   '{{ hash_type }}': '{{ hash_value }}'
-  patches:
-    - sasview_setup.patch
 
 build:
   number: 0
