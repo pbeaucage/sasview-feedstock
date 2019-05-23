@@ -1,16 +1,15 @@
 {% set name = "sasview" %}
 {% set version = "5.0.0" %}
-{% set tagged_version = "5.0-beta.2" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "0d49040321cd7ada4df35c366e9759a05fae2c0f5082cf57f4eaa69f0ab16f04" %}
+{% set hash_value = "1c1a1bc8399b9809d315d081ebdc1b54f7e345cf489020176e657d4efa30c23e" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  url: https://github.com/SasView/{{ name }}/archive/v{{ tagged_version }}.{{ file_ext }}
+  url: https://github.com/SasView/{{ name }}/archive/v{{ version }}.{{ file_ext }}
   '{{ hash_type }}': '{{ hash_value }}'
   patches:
     - sasview_setup.patch
