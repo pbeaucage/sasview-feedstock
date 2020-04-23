@@ -1,20 +1,17 @@
 {% set name = "sasview" %}
-{% set version = "5.0.0" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "1c1a1bc8399b9809d315d081ebdc1b54f7e345cf489020176e657d4efa30c23e" %}
+{% set version = "5.0.2" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: https://github.com/SasView/{{ name }}/archive/v{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://github.com/SasView/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 92752efb4593be216ccc3063e70f5868ccf779c2815547610d0bc9ba460edd36
 
 build:
-  number: 2
-  skip: True  # [win or py2k]
+  number: 0
+  skip: true  # [win or py2k]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
 
