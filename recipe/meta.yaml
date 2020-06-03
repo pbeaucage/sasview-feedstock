@@ -10,7 +10,7 @@ source:
   sha256: 92752efb4593be216ccc3063e70f5868ccf779c2815547610d0bc9ba460edd36
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py2k]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
@@ -28,7 +28,7 @@ requirements:
     - bumps
     - h5py >=2.5
     - lxml
-    - matplotlib
+    - matplotlib-base
     - {{ pin_compatible('numpy') }}
     - periodictable >=1.5.0
     - pillow
