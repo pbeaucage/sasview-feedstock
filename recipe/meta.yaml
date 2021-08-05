@@ -1,5 +1,5 @@
 {% set name = "sasview" %}
-{% set version = "5.0.2" %}
+{% set version = "5.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/SasView/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 92752efb4593be216ccc3063e70f5868ccf779c2815547610d0bc9ba460edd36
+  sha256: f1ff482d29e80984dd4837cbb0c4fe8496f25567d9faa78f4f0fa52737ef10b9
 
 build:
-  number: 1
-  skip: true  # [win or py2k]
+  number: 0
+  skip: true  # [win or py<36]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
 
@@ -19,13 +19,15 @@ requirements:
   build:
     - {{ compiler('cxx') }}
   host:
-    - numpy
-    - pip
-    - pyqt >=5
     - python
+    - pip
+    - numpy
+    - pyqt >=5
     - setuptools
   run:
+    - python
     - bumps
+    - dataclasses
     - h5py >=2.5
     - lxml
     - matplotlib-base
@@ -34,24 +36,27 @@ requirements:
     - pillow
     - pyparsing >=2.0.0
     - pyqt >=5
-    - python
     - qt5reactor
     - sasmodels
     - scipy
-    - twisted <=18.4
+    - twisted
     - xhtml2pdf
 
 test:
+  requires:
+    - pip
   imports:
     - sas.sasview
     - sas.qtgui
     - sas.qtgui.MainWindow
   commands:
+    # TODO: uncomment it once arabic_reshaper >=2.1.0 is packaged
+    # - pip check
     - which sasview
 
 about:
   home: https://github.com/SasView/sasview
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.TXT
   summary: SasView is a Small Angle Scattering (SAS) analysis package
