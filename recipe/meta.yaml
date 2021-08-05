@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or py2k]
+  skip: true  # [win or py<36]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
 
@@ -19,13 +19,15 @@ requirements:
   build:
     - {{ compiler('cxx') }}
   host:
-    - numpy
-    - pip
-    - pyqt >=5
     - python
+    - pip
+    - numpy
+    - pyqt >=5
     - setuptools
   run:
+    - python
     - bumps
+    - dataclasses
     - h5py >=2.5
     - lxml
     - matplotlib-base
@@ -34,11 +36,10 @@ requirements:
     - pillow
     - pyparsing >=2.0.0
     - pyqt >=5
-    - python
     - qt5reactor
     - sasmodels
     - scipy
-    # - twisted <=18.4
+    - twisted
     - xhtml2pdf
 
 test:
