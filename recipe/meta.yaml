@@ -42,11 +42,14 @@ requirements:
     - xhtml2pdf
 
 test:
+  requires:
+    - pip
   imports:
     - sas.sasview
     - sas.qtgui
     - sas.qtgui.MainWindow
   commands:
+    - pip check
     - which sasview
 
 about:
