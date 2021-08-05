@@ -38,7 +38,7 @@ requirements:
     - qt5reactor
     - sasmodels
     - scipy
-    - twisted <=18.4
+    # - twisted <=18.4
     - xhtml2pdf
 
 test:
