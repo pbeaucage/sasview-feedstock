@@ -1,5 +1,5 @@
 {% set name = "sasview" %}
-{% set version = "5.0.3" %}
+{% set version = "5.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SasView/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f1ff482d29e80984dd4837cbb0c4fe8496f25567d9faa78f4f0fa52737ef10b9
+  sha256: 1ea0971357effeaff1089664a2a2858a144ecbcf8538fabed8b81cbacb5d59ad
 
 build:
   number: 0
@@ -50,8 +50,7 @@ test:
     - sas.qtgui
     - sas.qtgui.MainWindow
   commands:
-    # TODO: uncomment it once arabic_reshaper >=2.1.0 is packaged
-    # - pip check
+    - pip check
     - which sasview
 
 about:
