@@ -50,7 +50,8 @@ test:
     - sas.qtgui
     - sas.qtgui.MainWindow
   commands:
-    - pip check
+    # TODO: uncomment it once arabic_reshaper >=2.1.0 is packaged
+    # - pip check
     - which sasview
 
 about:
