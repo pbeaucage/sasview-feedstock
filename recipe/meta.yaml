@@ -10,7 +10,7 @@ source:
   sha256: 1ea0971357effeaff1089664a2a2858a144ecbcf8538fabed8b81cbacb5d59ad
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py<36]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
