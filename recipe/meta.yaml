@@ -28,7 +28,10 @@ requirements:
     - python
     - bumps >=0.9.0
     - dataclasses
-    - importlib-metadata  # [py==37]
+    # See
+    # https://github.com/sqlalchemy/mako/blob/86025c02f25954d7be32b368c6b015f6c9f51b71/setup.cfg#L37
+    # for the importlib-metadata conditional dependency.
+    - importlib-metadata  # [py<38]
     - h5py >=2.5
     - lxml
     - matplotlib-base
