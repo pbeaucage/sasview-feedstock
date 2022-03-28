@@ -1,16 +1,16 @@
 {% set name = "sasview" %}
-{% set version = "5.0.4" %}
+{% set version = "5.0.4.post36" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/SasView/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 1ea0971357effeaff1089664a2a2858a144ecbcf8538fabed8b81cbacb5d59ad
+  url: https://github.com/SasView/{{ name }}/archive/2596c259f132ad416b3b377aa4a78366b3d9a809.tar.gz
+  sha256: 66dc5f15445eaf163c9279f7c391ae71d1c82f330b6d82d940aeb765664515b6
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or py<36]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
@@ -26,21 +26,25 @@ requirements:
     - setuptools
   run:
     - python
-    - bumps
+    - bumps >=0.9.0
     - dataclasses
+    # See
+    # https://github.com/sqlalchemy/mako/blob/86025c02f25954d7be32b368c6b015f6c9f51b71/setup.cfg#L37
+    # for the importlib-metadata conditional dependency.
+    - importlib-metadata  # [py<38]
     - h5py >=2.5
     - lxml
     - matplotlib-base
-    - {{ pin_compatible('numpy') }}
     - periodictable >=1.5.0
     - pillow
     - pyparsing >=2.0.0
     - pyqt >=5
     - qt5reactor
-    - sasmodels
+    - sasmodels >=1.0.6
     - scipy
     - twisted
     - xhtml2pdf
+    - {{ pin_compatible('numpy') }}
 
 test:
   requires:
