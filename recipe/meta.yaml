@@ -10,7 +10,7 @@ source:
   sha256: 66dc5f15445eaf163c9279f7c391ae71d1c82f330b6d82d940aeb765664515b6
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py<36]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
@@ -28,13 +28,13 @@ requirements:
     - python
     - bumps >=0.9.0
     - dataclasses
+    - h5py >=2.5
     # See
     # https://github.com/sqlalchemy/mako/blob/86025c02f25954d7be32b368c6b015f6c9f51b71/setup.cfg#L37
     # for the importlib-metadata conditional dependency.
     - importlib-metadata  # [py<38]
-    - h5py >=2.5
     - lxml
-    - matplotlib-base
+    - matplotlib-base <3.5
     - periodictable >=1.5.0
     - pillow
     - pyparsing >=2.0.0
@@ -43,6 +43,7 @@ requirements:
     - sasmodels >=1.0.6
     - scipy
     - twisted
+    - uncertanties
     - xhtml2pdf
     - {{ pin_compatible('numpy') }}
 
