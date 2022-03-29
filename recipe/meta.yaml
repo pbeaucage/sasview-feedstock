@@ -43,7 +43,7 @@ requirements:
     - sasmodels >=1.0.6
     - scipy
     - twisted
-    - uncertanties
+    - uncertainties
     - xhtml2pdf
     - {{ pin_compatible('numpy') }}
 
