@@ -10,7 +10,7 @@ source:
   sha256: 8c92ecc113cf861f675a4ff5024920e036b58d178fd6e7afb77bd2fac41d5077
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py<36]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
@@ -22,7 +22,7 @@ requirements:
     - python
     - pip
     - numpy
-    - pyqt >=5
+    - pyqt >=5.12
     - setuptools
   run:
     - python
@@ -39,8 +39,9 @@ requirements:
     - periodictable >=1.5.0
     - pillow
     - pyparsing >=2.0.0
-    - pyqt >=5
+    - pyqt >=5.12
     - qt5reactor
+    - qtconsole
     - sasmodels >=1.0.6
     - scipy
     - twisted
