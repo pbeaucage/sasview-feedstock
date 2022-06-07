@@ -22,7 +22,7 @@ requirements:
     - python
     - pip
     - numpy
-    - pyqt >=5
+    - pyqt >=5.12
     - setuptools
   run:
     - python
@@ -39,7 +39,7 @@ requirements:
     - periodictable >=1.5.0
     - pillow
     - pyparsing >=2.0.0
-    - pyqt =5.13
+    - pyqt >=5.12
     - qt5reactor
     - qtconsole
     - sasmodels >=1.0.6
