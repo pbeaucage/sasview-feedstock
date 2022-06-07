@@ -215,4 +215,5 @@ Feedstock Maintainers
 * [@mrakitin](https://github.com/mrakitin/)
 * [@rozyczko](https://github.com/rozyczko/)
 * [@stuartcampbell](https://github.com/stuartcampbell/)
+* [@wpotrzebowski](https://github.com/wpotrzebowski/)
 
