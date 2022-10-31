@@ -11,7 +11,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [win or py<36]
+  skip: true  # [py<36]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
 
@@ -39,7 +39,7 @@ requirements:
     - periodictable >=1.5.0
     - pillow
     - pyparsing >=2.0.0
-    - pyqt >=5.12
+    - pyqt >=5.12,<6.0
     - qt5reactor
     - qtconsole
     - sasmodels >=1.0.6
@@ -73,4 +73,5 @@ extra:
     - mrakitin
     - rozyczko
     - stuartcampbell
+    - pbeaucage
     - wpotrzebowski
