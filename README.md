@@ -29,7 +29,7 @@ Current build status
           <tbody><tr>
               <td>linux_64_numpy1.20python3.8.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6328&branchName=main">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6328&branchName=main"
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/sasview-feedstock?branchName=main&jobName=linux&configuration=linux_64_numpy1.20python3.8.____cpython" alt="variant">
                 </a>
               </td>
@@ -37,6 +37,7 @@ Current build status
               <td>linux_64_numpy1.20python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6328&branchName=main">
+
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/sasview-feedstock?branchName=main&jobName=linux&configuration=linux_64_numpy1.20python3.9.____cpython" alt="variant">
                 </a>
               </td>
