@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SasView/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 2cb9383cca45e315b9d46a3fcfff835c4e5b8e1f0e878d2bfe9c55666e135d81
+  sha256: 8c92ecc113cf861f675a4ff5024920e036b58d178fd6e7afb77bd2fac41d5077
 
 build:
   number: 2
