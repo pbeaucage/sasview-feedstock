@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/SasView/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 69a86982bca8a0430b1defeae751a82185847fda
+  sha256: eedf884afaea5e6b9547aee8f4c10bae846a0f0b08e83a9b50cd71da6b02faa3
 
 build:
-  number: 4
+  number: 0
   skip: true  # [py<36]
   entry_points:
     - sasview = sas.qtgui.MainWindow.MainWindow:run_sasview
