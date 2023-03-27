@@ -43,7 +43,7 @@ requirements:
     - pyqt >=5.12,<6.0
     - qt5reactor
     - qtconsole
-    - sasmodels >=1.0.6
+    - sasmodels >=1.0.7
     - scipy
     - twisted
     - uncertainties
