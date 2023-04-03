@@ -48,7 +48,7 @@ requirements:
     - twisted
     - uncertainties
     - xhtml2pdf
-    - {{ pin_compatible('numpy <1.24') }} # Maintainer note: remove this numpy pin when sasview 5.0.6 is released, 5.0.6 and newer patch this issue.
+    - {{ pin_compatible('numpy') }}
     
 
 test:
