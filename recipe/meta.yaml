@@ -1,5 +1,5 @@
 {% set name = "sasview" %}
-{% set version = "5.0.6" %}
+{% set version = "5.0.6rc1" %}
 
 package:
   name: {{ name|lower }}
