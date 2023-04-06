@@ -1,11 +1,11 @@
-About sasview
-=============
+About sasview-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sasview-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/SasView/sasview
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sasview-feedstock/blob/main/LICENSE.txt)
 
 Summary: SasView is a Small Angle Scattering (SAS) analysis package
 
