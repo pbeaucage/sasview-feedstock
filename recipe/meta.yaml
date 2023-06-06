@@ -1,5 +1,5 @@
 {% set name = "sasview" %}
-{% set version = "5.0.6rc1" %}
+{% set version = "5.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SasView/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: eedf884afaea5e6b9547aee8f4c10bae846a0f0b08e83a9b50cd71da6b02faa3
+  sha256: 3ee5a95c30d9858c1d32766e99a5e3504d219614fb6c5b2cc7c2561d6b924291
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
   host:
     - python
     - pip
-    - numpy <1.24 
+    - numpy <1.24
     # Maintainer note: remove this numpy pin when sasview 5.0.6 is released, 5.0.6 and newer patch this issue.
     - pyqt >=5.12
     - setuptools
@@ -49,7 +49,7 @@ requirements:
     - uncertainties
     - xhtml2pdf
     - {{ pin_compatible('numpy') }}
-    
+
 
 test:
   requires:
